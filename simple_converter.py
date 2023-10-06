@@ -1,12 +1,10 @@
 # einfachen Umrechner: Tage in Stunden
 
+# Anzahl Tage
 days = 3
 
+# Umrechnung
 hours = days * 24
-
-addition = 4 + 3
-
-# print(days, hours)
 
 # mehrere Argumente durch Komma getrennt
 print(days, "Tage sind", hours, "Stunden")
