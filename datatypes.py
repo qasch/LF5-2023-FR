@@ -19,6 +19,7 @@ print(boolean)
 datentyp = type(boolean)
 print(datentyp)
 
+# Neue Zeile hinzugefügt
 
 # Variablen können unterschiedliche Datenytpen zugewiesen werden
 boolean = 987987
