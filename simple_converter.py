@@ -1,7 +1,13 @@
 # einfachen Umrechner: Tage in Stunden
 
-# Anzahl Tage
-days = 3
+# Benutzereingabe: input() gibt immer einen String zurück
+days = input("Bitte gib die Anzahl der Tage als einen Integer ein: ")
+print(type(days))   # -> str
+
+# explizites Casting von str nach int 
+# Ergebnis muss in Variable days gespeichert werden, ansonsten wird die Variable nicht geändert
+days = int(days)
+print(type(days))   # -> int
 
 # Umrechnung
 hours = days * 24
