@@ -68,5 +68,11 @@
 # }
 
 
-for count in range(start, end, step):
-    print(count)
+# for count in range(start, end, step):
+#     print(count)
+
+
+# Beispiel für for-Loop
+my_string = "hallo"
+for character in my_string:
+    print(character)
