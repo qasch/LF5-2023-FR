@@ -19,16 +19,41 @@ print_my_name("Kai")
 print_my_name("Peter")
 
 
+# alter = 18
+
 def print_full_name(firstname, lastname):
+    # Variable alter ist jetzt im gesamten Code gültig (nicht der beste Stil aber möglich)
+    global alter
+    alter = 31
+
+    # lokale Variable alter gibt es nur innerhalb der Funktion, ausserhalt existiert sie nicht
+    # alter = 42 
+
     print("Mein Vorname ist " + firstname)
     print("Mein Nachname ist " + lastname)
+    print("Ich bin " + str(alter) + " Jahre alt")
 
 firstname = "Karl"
 lastname = "Dall"
 print_full_name("Peter", "Lustig")
-print(firstname, lastname)
+print(firstname)
+print(alter)
 
+def generate_age(actual_year, birth_year):
+    return actual_year - birth_year
 
+# ----------------------------------------------------------
+
+def print_full_name_and_age(firstname, lastname, alter):
+    print("Mein Vorname ist " + firstname)
+    print("Mein Nachname ist " + lastname)
+    print("Ich bin " + str(alter) + " Jahre alt")
+
+# Funktionen können auch als Argumente übergeben werden
+print_full_name_and_age("Gretl", "Hund", generate_age(2023, 2013))
+
+# s.o.
+print(type(alter))
 
 ## Funktion mit Rückgabewert
 def addition(x, y):
