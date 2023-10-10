@@ -1,9 +1,15 @@
+# Ausgabe was das Programm/Skript leistet
+print('''---------------------------------------------------------------------------------------
+Dieses Programm wandelt eine gegebene Anzahl Tage in Stunden, Minuten oder Sekunden um. 
+---------------------------------------------------------------------------------------
+      ''')
+
 # Bewusst konzipierte Endlosschleife, damit Programm immer wieder ausgeführt wird
 # Programm kann dann über bestimmte Eingabe verlassen werden.
 # Einfaches Beispiel für Anwendung des break-Statements.
 while True:
 
-    print("Umrechung von gegebenen Tagen in: ")
+    print("Umrechung der gegebenen Tage in: ")
 
     choice_input = input("""
     [1] Stunden
@@ -12,10 +18,12 @@ while True:
 
     [0] Programm beenden
     
-    Eingabe: """)
+Deine Eingabe: """)
 
-    days = input("Bitte gib die Anzahl der Tage als einen Integer ein: ")
+    days = input("\nBitte gib die Anzahl der Tage als einen Integer ein: ")
+    print()
     
+    print("------------------------------")
     if days.isdigit():
         # Programmlogik
         days = int(days)
@@ -36,6 +44,7 @@ while True:
             print("Falsche Eingabe, bitte 1, 2, 3 oder 0 eingeben")
 
     else:
-        print("Bitte nur Ziffern eingaben.")
+        print("Bitte nur Ziffern eingeben, keine Buchstaben oder sonst irgendwelchen Mist.. ;)")
+    print("------------------------------\n")
 
 print("Programm beendet.")
