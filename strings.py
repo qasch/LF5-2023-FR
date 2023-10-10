@@ -15,3 +15,8 @@ print(my_string.capitalize())   # Ersten Buchstaben gross schreiben
 print(my_string.count("u"))     # Wie viele 'u' gibt es in dem String?
 print(my_string.split("d"))     # Unerteilt String am angegebenen Buchstaben
 print(my_string.startswith('u'))     # Beginnt der String mit einem 'u'?
+
+
+
+print("Hallo", end='*')
+print("noch ein print")
