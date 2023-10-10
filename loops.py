@@ -59,8 +59,8 @@
 #     print(count)
 
 
-# for count in range(1, -10, -1):   # Angabe Startwert (inklusiv) und Endwert (exklusiv)
-#     print(count)
+for count in range(1, -10, -1):   # Angabe Startwert (inklusiv) und Endwert (exklusiv)
+    print(count)
 
 # Analoges Beispiel in Java:
 # for(int i = 0; i < 10; i++){
@@ -73,6 +73,6 @@
 
 
 # Beispiel für for-Loop
-my_string = "hallo"
-for character in my_string:
-    print(character)
+# my_string = "hallo"
+# for character in my_string:
+#     print(character)
