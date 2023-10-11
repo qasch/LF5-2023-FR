@@ -50,7 +50,14 @@ def remove_article_from_list(index):
 def ask_user_for_article_to_remove():
     '''Benutzer nach Artikel fragen und diesen aus der shopping list entfernen'''
     article_index = input("Bitte den Index des Artikels eingeben, der aus der Einkaufsliste entfernt werden soll: ")
-    remove_article_from_list(int(article_index) - 1)
+    try:
+        remove_article_from_list(int(article_index) - 1)
+    except IndexError:
+        print("Unter dem angegebenen Index ist kein Artikel in der Liste zu finden")
+    except ValueError:
+        print("Bitte einen passenden Index als Ziffer angeben")
+    except Exception as e:
+        print("Folgender Fehler ist aufgetreten: " + e.args[0])
 
 
 # Funktionsaufrufe - Logik unseres Skripts
