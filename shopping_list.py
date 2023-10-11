@@ -21,14 +21,12 @@
 # - Einkäufe gruppieren (List in List?)
 
 
-print("Dies ist eine Einkaufsliste (hoffentlich...)")
-
 shopping_list = []
 
 # Funktionsdeklarationen
 
 def append_article_to_list(article):
-    '''Artkel aus der Shopping Liste entfernen'''
+    '''Artkel zur Shopping Liste hinzufügen'''
     shopping_list.append(article)
 
 
@@ -38,9 +36,6 @@ def ask_user_for_article_to_append():
     append_article_to_list(article)
 
 
-
-
-# shopping list ausgeben
 def print_shopping_list():
     print("Inhalt der Einkaufsliste: ")
     for index, article in enumerate(shopping_list):
@@ -52,21 +47,42 @@ def remove_article_from_list(index):
     shopping_list.pop(index)
 
 
-# Funktionsaufrufe
-
-# append_article_to_list("Gurken")
-# append_article_to_list("Tomaten")
-# append_article_to_list("Bier")
-
-ask_user_for_article_to_append()
-
-print_shopping_list()
-
-remove_article_from_list(0)
-
-print_shopping_list()
+def ask_user_for_article_to_remove():
+    '''Benutzer nach Artikel fragen und diesen aus der shopping list entfernen'''
+    article_index = input("Bitte den Index des Artikels eingeben, der aus der Einkaufsliste entfernt werden soll: ")
+    remove_article_from_list(int(article_index) - 1)
 
 
+# Funktionsaufrufe - Logik unseres Skripts
+
+# Benutzer nach Aktion fragen
+
+print("Dies ist eine Einkaufsliste (und wie!)")
+
+menu_txt = """Was möchtest du machen:
+      [1] Artikel hinzufügen
+      [2] Shopping Liste anzeigen
+      [3] Artikel entfernen
+      ---------------------
+      [4] Programm beenden
+      """
+
+
+while True:
+    user_input = input(menu_txt)
+    if user_input == '1':
+        ask_user_for_article_to_append()
+    elif user_input == '2':
+        print_shopping_list()
+    elif user_input == '3':
+        ask_user_for_article_to_remove()
+    elif user_input == '4':
+        exit(0)  # erfolgreich beendet
+    else:
+        print("Ungültige Eingabe")
+        # exit(1)  # nicht erfolgreich beendet
+
+print(shopping_list)
 # - Gurken
 # - Tomaten
 # - Bier 
