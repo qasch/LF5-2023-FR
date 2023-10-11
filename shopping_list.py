@@ -37,7 +37,7 @@ def ask_user_for_article_to_append():
 
 
 def print_shopping_list():
-    print("Inhalt der Einkaufsliste: ")
+    print("Inhalt der Einkaufsliste: \n")
     for index, article in enumerate(shopping_list):
         print("[" + str(index + 1) + "]", article)
 
@@ -53,30 +53,33 @@ def ask_user_for_article_to_remove():
     try:
         remove_article_from_list(int(article_index) - 1)
     except IndexError:
-        print("Unter dem angegebenen Index ist kein Artikel in der Liste zu finden")
+        print("\nERROR: Unter dem angegebenen Index ist kein Artikel in der Liste zu finden")
     except ValueError:
-        print("Bitte einen passenden Index als Ziffer angeben")
+        print("\nERROR: Bitte einen passenden Index als Ziffer angeben")
     except Exception as e:
-        print("Folgender Fehler ist aufgetreten: " + e.args[0])
+        print("\nERROR: Folgender Fehler ist aufgetreten: " + e.args[0])
 
 
 # Funktionsaufrufe - Logik unseres Skripts
 
 # Benutzer nach Aktion fragen
 
-print("Dies ist eine Einkaufsliste (und wie!)")
+print("--- Dies ist eine simple aber coole Einkaufsliste ---\n")
 
-menu_txt = """Was möchtest du machen:
+menu_txt = """
+Was möchtest du machen:
+
       [1] Artikel hinzufügen
       [2] Shopping Liste anzeigen
       [3] Artikel entfernen
       ---------------------
       [4] Programm beenden
-      """
+
+"""
 
 
 while True:
-    user_input = input(menu_txt)
+    user_input = input(menu_txt + "\n")
     if user_input == '1':
         ask_user_for_article_to_append()
     elif user_input == '2':
