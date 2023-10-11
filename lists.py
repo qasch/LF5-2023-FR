@@ -80,3 +80,88 @@ print("\nAusgabe aller Elemente auf die schlaueste Art: ")
 for element in my_string_list:
     print(element)
 
+
+
+animals = ["Hund", "Katze", "Maus", "Adler"]
+
+print("\nAusgabe aller Elemente mit zugehörigem Index: ")
+for index, animal in enumerate(animals):
+    print(str(index + 1) + ".:", animal)
+
+## List-Methoden:
+# Element ans Ende der Liste anhängen
+animals.append("Hamster")
+print(animals)
+animals.append("Seegurke")
+animals.append("Seegurke")
+print(animals)
+
+# Liste leeren
+# animals.clear()
+# print(animals)
+
+print(animals.count("Seegurke"))
+
+# new_list = animals.extend(my_string_list)
+# print(type(new_list))
+
+# List einer anderen List hinzufügen
+animals.extend(my_string_list)
+print(animals)
+
+# Ausgabe des Index 
+print(animals.index("Seegurke"))
+
+# Element an bestimmtem Index hinzufügen
+animals.insert(2, "Pferd")
+print(animals)
+
+# Element an bestimmten Index entfernen und zurückgeben
+print(animals.pop(2))
+print(animals)
+
+# (erstes gefundenes) Element aus List entfernen
+animals.remove("Seegurke")
+print(animals)
+
+# List sortieren
+animals.sort()
+print(animals)
+
+# Reihenfolge der Elemente umkehren
+animals.reverse()
+print(animals)
+
+
+# Ein Tuple ist soetwas wie eine unveränderbare List
+# (Runde Klammern anstatt eckige)
+my_tuple = ("Hund", "Katze", "Maus")
+print(my_tuple)
+
+# Element an bestimmten Index ersetzen/ändern
+animals[1] = "Ratte"
+print(animals)
+
+
+
+# o | x | o
+# x | o | o
+# o | x | o
+
+# index             0                1                2
+tictactoe = [['o', 'x', 'o'], ['x', '1', 'o'], ['o', 'x', 'o']]
+
+print()
+print()
+print()
+print(tictactoe[1][1])
+
+print()
+for liste in tictactoe:
+    for element in liste:
+        print(element)
+
+
+
+
+
