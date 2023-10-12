@@ -29,7 +29,7 @@ try:
     file = open(path_to_file, "r")    # relativer Pfad
     # text = file.read()     # liest gesamte Datei, über Argument kann Anzahl Bytes angegeben werden    
     # text = file.readline()   # liest eine Zeile, über Argument kann Anzahl Zeichen angegeben werden
-    text = file.readlines()  # liest ganze Datei, Ergebnis ist Liste, jede Zeile ein Element in Liste
+    # text = file.readlines()  # liest ganze Datei, Ergebnis ist Liste, jede Zeile ein Element in Liste
     print(text)
     file.close()
 except FileNotFoundError:
@@ -37,3 +37,13 @@ except FileNotFoundError:
 except Exception as e:
     print("ERROR: Folgender Fehler ist aufgetreten: ", e.args[0])
 
+# Context Manager
+# Der eigentlich gebräuchlichere Weg, Dateien zu lesen bzw. zu schreiben.
+# So brauchen wir uns z.B. nicht um das Schliessen des Streams zu kümmern 
+# Achtung: Auch hier die Exceptions nicht vergessen!
+
+with open('textdatei.txt', 'w') as my_opend_file:
+    my_opend_file.write("Diddeldidumm")
+
+with open('textdatei.txt', 'r') as my_opend_file:
+    print(my_opend_file.read())
