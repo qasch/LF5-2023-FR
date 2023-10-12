@@ -7,6 +7,8 @@ path_to_file = "textdatei.txt"
 
 
 # Dateiinhalt schreiben (w)
+# Streng genommen könnten wir hier auf die FileNotFound Exception verzichten, da 
+# die Datei erstellt wird, falls sie nicht existiert
 try:
     # Dateistrom erzeugen
     # file = open("files/textdatei.txt")    # relativer Pfad, Angabe untergeordnetes Verzeichnis files
